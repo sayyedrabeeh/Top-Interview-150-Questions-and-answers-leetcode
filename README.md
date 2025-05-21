@@ -18,6 +18,7 @@ This repository contains:
 | #  | Question Name                                              | Difficulty |
 |----|------------------------------------------------------------|------------|
 | 1  | [Merge Sorted Array](./Merge%20Sorted%20Array/)            | Easy       |
+| 2  | [Remove Element](./Remove%20Element/)                      | Easy       |
 
  
 
