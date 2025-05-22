@@ -40,7 +40,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
  
 ### Solutions
 
-#### 1. 
+#### solution 1 : 
 
 break down your code **line by line**, and walk through it with an example:
 
@@ -135,6 +135,110 @@ nums[:k] = [1, 2, 3]  # unique elements
 * Every time we find a new unique value (`nums[i] != nums[a]`), we move it to the position after the last unique one.
 * The function returns `a + 1` which is the count of unique values.
 
-Let me know if you'd like a visual diagram or how to modify this to actually delete duplicates!
+ 
 
 
+#### solution 2 :
+
+
+  break down your code **line by line**, and walk through an example.
+
+---
+
+### 🔸 Code:
+
+```python
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        k = 1
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:
+                nums[k] = nums[i]
+                k = k + 1
+        return k
+```
+
+---
+
+### 🧪 Example Input:
+
+```python
+nums = [1, 1, 2, 2, 3]
+```
+
+---
+
+### ✅ Line-by-Line Explanation:
+
+---
+
+#### `k = 1`
+
+* `k` is the position where the **next unique number** should go.
+* Since the first element is always unique, we start `k` from 1.
+
+---
+
+#### `for i in range(1, len(nums))`
+
+* Start looping from the second element (`i = 1`) to the end of the list.
+
+---
+
+### 🔁 Loop Iterations:
+
+#### ➤ `i = 1`
+
+* `nums[i] = nums[1] = 1`
+* `nums[i - 1] = nums[0] = 1`
+* `1 == 1` → duplicate → skip
+
+#### ➤ `i = 2`
+
+* `nums[i] = 2`, `nums[i - 1] = 1`
+* `2 != 1` → unique
+* `nums[k] = nums[i]` → `nums[1] = 2`
+* `k = k + 1` → `k = 2`
+* Now `nums = [1, 2, 2, 2, 3]`
+
+#### ➤ `i = 3`
+
+* `nums[i] = 2`, `nums[i - 1] = 2`
+* `2 == 2` → duplicate → skip
+
+#### ➤ `i = 4`
+
+* `nums[i] = 3`, `nums[i - 1] = 2`
+* `3 != 2` → unique
+* `nums[k] = nums[i]` → `nums[2] = 3`
+* `k = k + 1` → `k = 3`
+* Now `nums = [1, 2, 3, 2, 3]`
+
+---
+
+### `return k`
+
+* `k = 3`, which means there are 3 unique elements.
+* The modified list is: `nums[:k] = [1, 2, 3]`
+
+---
+
+### ✅ Final Output:
+
+```python
+k = 3
+nums[:k] = [1, 2, 3]  # All unique elements, in-place
+```
+
+---
+
+### 🧠 Summary:
+
+| Variable | Meaning                                    |
+| -------- | ------------------------------------------ |
+| `i`      | Scans through the whole array              |
+| `k`      | Tracks where to insert next unique element |
+
+This method works **because the array is sorted** — so duplicates are **always next to each other**.
+
+ 
