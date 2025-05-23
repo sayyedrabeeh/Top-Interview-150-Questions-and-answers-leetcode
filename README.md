@@ -20,6 +20,7 @@ This repository contains:
 | 1  | [Merge Sorted Array](./Merge%20Sorted%20Array/)            | Easy       |
 | 2  | [Remove Element](./Remove%20Element/)                      | Easy       |
 | 3  | [Remove Duplicates from Sorted Array](./Remove%20Duplicates%20from%20Sorted%20Array/)| Easy       |
+| 4  | [Majority Element](./Majority%20Element)                   | Easy       |
 
  
 
