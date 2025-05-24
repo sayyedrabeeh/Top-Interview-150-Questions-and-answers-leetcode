@@ -21,6 +21,7 @@ This repository contains:
 | 2  | [Remove Element](./Remove%20Element/)                      | Easy       |
 | 3  | [Remove Duplicates from Sorted Array](./Remove%20Duplicates%20from%20Sorted%20Array/)| Easy       |
 | 4  | [Majority Element](./Majority%20Element)                   | Easy       |
+| 5  | [Find the Index of the First Occurrence in a String](./Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String/)                   | Easy       |
 
  
 
