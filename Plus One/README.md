@@ -30,3 +30,127 @@
    Incrementing by one gives 9 + 1 = 10.
    Thus, the result should be [1,0].
     
+#### explanation 
+
+  
+### 👩‍💻 Code:
+
+```python
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        a = ''.join(map(str, digits))
+        b = int(a) + 1
+        c = [int(i) for i in str(b)]
+        return c
+```
+
+---
+
+### ✅ Purpose:
+
+This function simulates **adding one** to a number represented as a list of digits.
+
+### 📌 Example Input:
+
+```python
+digits = [1, 2, 9]
+```
+
+This represents the number **129**, and we want to return **130** as a list: `[1, 3, 0]`.
+
+---
+
+## 🔍 Step-by-step Breakdown:
+
+---
+
+### 🔹 Line 1: `a = ''.join(map(str, digits))`
+
+#### ✅ What it does:
+
+* Converts each digit to a string and **joins them together** into a single string.
+
+#### 🔄 Operation:
+
+```python
+map(str, digits) → ['1', '2', '9']
+''.join(...) → '129'
+```
+
+#### ✅ Result:
+
+```python
+a = '129'  # String form of the number
+```
+
+---
+
+### 🔹 Line 2: `b = int(a) + 1`
+
+#### ✅ What it does:
+
+* Converts the string `'129'` to an integer, adds `1` to it.
+
+#### 🔄 Operation:
+
+```python
+int('129') → 129
+129 + 1 → 130
+```
+
+#### ✅ Result:
+
+```python
+b = 130  # Integer after increment
+```
+
+---
+
+### 🔹 Line 3: `c = [int(i) for i in str(b)]`
+
+#### ✅ What it does:
+
+* Converts the integer `130` back to a string `'130'`, then iterates over each character and converts it back to an integer.
+
+#### 🔄 Operation:
+
+```python
+str(130) → '130'
+[ int(i) for i in '130' ] → [1, 3, 0]
+```
+
+#### ✅ Result:
+
+```python
+c = [1, 3, 0]
+```
+
+---
+
+### 🔹 Line 4: `return c`
+
+#### ✅ What it does:
+
+Returns the final list of digits after the +1 operation.
+
+---
+
+### ✅ Final Output:
+
+```python
+[1, 3, 0]
+```
+
+---
+
+## 🔁 Recap with Example:
+
+Input: `[1, 2, 9]`
+Process:
+
+* `'129'` → `130` → `'130'` → `[1, 3, 0]`
+  Output: `[1, 3, 0]`
+
+---
+
+ 
