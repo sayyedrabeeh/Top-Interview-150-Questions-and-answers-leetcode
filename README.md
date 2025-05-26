@@ -23,6 +23,7 @@ This repository contains:
 | 4  | [Majority Element](./Majority%20Element)                   | Easy       |
 | 5  | [Find the Index of the First Occurrence in a String](./Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String/)                   | Easy       |
 | 6  | [Plus One](./Plus%20One/)                   | Easy       |
+| 6  | [Sqrt(x)](./Sqrt(x))                   | Easy       |
 
  
 
